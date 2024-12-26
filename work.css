@@ -1,0 +1,251 @@
+/* Resetting some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Body */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(241, 238, 238); /* שחור כהה */
+    color: #f0f0f0; /* אפור בהיר */
+    direction: rtl;
+    transition: background-color 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #001338; /* כחול רויאל כהה */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #5bb8d6; /* תכלת מעודן */
+    border-radius: 0 0 20px 20px;
+}
+
+header h1 {
+    text-align: center;
+    color: #5bb8d6; /* תכלת מעודן */
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5bb8d6; /* תכלת מעודן */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #6cbdd9; /* גוון מעט בהיר יותר של תכלת מעודן */
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.info-section {
+    background-color: #1c1c1c; /* שחור כהה */
+    padding: 20px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.info-section:hover {
+    background-color: #2a2a2a; /* אפור כהה */
+}
+
+.hero > p {
+    text-align: center;
+    color: #d3d3d3; /* אפור בהיר */
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    color: #5bb8d6; /* תכלת מעודן */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #f0f0f0; /* אפור בהיר */
+    font-size: 1rem;
+}
+
+form input, form select, form option {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #555; /* אפור כהה */
+    background-color: #2a2a2a; /* אפור כהה */
+    color: #ecf0f1; /* אפור בהיר */
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: 250px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #f0f0f0; /* אפור בהיר */
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #2a2a2a; /* אפור כהה */
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* כהה יותר */
+}
+
+.modal-content h2 {
+    color: #5bb8d6; /* תכלת מעודן */
+    margin-bottom: 20px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555; /* אפור כהה */
+    background-color: #414141; /* אפור כהה יותר */
+    color: #ecf0f1; /* אפור בהיר */
+    border-radius: 5px;
+}
+
+.modal-content .btn {
+    background-color: #002366; /* כחול רויאל */
+    color: #f0f0f0; /* אפור בהיר */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal-content .btn:hover {
+    background-color: #001a4d; /* כחול כהה יותר */
+}
+
+/* Buttons */
+button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    background-color: #002366; /* כחול רויאל */
+    color: #f0f0f0; /* אפור בהיר */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+}
+
+button:hover {
+    background-color: #001a4d; /* כחול כהה יותר */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #1c1c1c; /* שחור כהה */
+    color: #f0f0f0; /* אפור בהיר */
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #5bb8d6; /* תכלת מעודן */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212; /* שחור כהה */
+    color: #f0f0f0; /* אפור בהיר */
+}
+
+body.dark-mode header {
+    background-color: #001a4d; /* כחול כהה */
+    border-bottom-color: #5bb8d6; /* תכלת מעודן */
+}
+
+body.dark-mode .info-section {
+    background-color: #1c1c1c; /* שחור כהה */
+}
+
+body.dark-mode nav a {
+    color: #5bb8d6; /* תכלת מעודן */
+}

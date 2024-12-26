@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלון הנסיך</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <div id="main-content">
+        <header>
+            <div class="header-container">
+                <h1>מלון הנסיך</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#history">היסטוריית שהות</a></li>
+                        <li><a href="#bookings">הזמנת חדרים</a></li>
+                        <li><a href="#facilities">שירותים</a></li>
+                        <li><a href="#gallery">גלריית תמונות</a></li>
+                        <li><a href="#contact">צור קשר</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </header>
+        
+        <main>
+            <div class="hero">
+                <h2>ברוכים הבאים למלון הנסיך!</h2>
+                <p>חווית אירוח יוקרתית במרכז העיר</p>
+            </div>
+            
+            <div class="info-section" id="history">
+                <h2>היסטוריית שהות</h2>
+                <div id="stay-history">
+                    <p>אין נתונים זמינים.</p>
+                </div>
+            </div>
+            
+            <div class="info-section" id="bookings">
+                <h2>הזמנת חדרים</h2>
+                <form id="booking-form">
+                    <label for="room">בחר חדר:</label>
+                    <select id="room" required>
+                        <option value="חדר רגיל">חדר רגיל</option> 
+                        <option value="חדר זוגי">חדר זוגי</option>
+                        <option value="חדר סוויטה">חדר סוויטה</option>
+                        <option value="חדר פרימיום">חדר פרימיום</option>
+                        <option value="חדר פנטהאוז">חדר פנטהאוז</option> 
+                    </select>
+                    <label for="date">בחר תאריך:</label>
+                    <input type="date" id="date" required>
+                </form>
+                <button type="submit" class="btn book-now-btn" id="book-now-btn">הזמן חדר</button>
+
+                <!-- Modal -->
+                <div id="booking-modal" class="modal hidden">
+                    <div class="modal-content">
+                        <span class="close-modal" id="close-modal">&times;</span>
+                        <h2>
+                            <a href="javascript:void(0)" onclick="conect()">התחבר /</a>
+                            <a href="javascript:void(0)" onclick="create()">צור חשבון</a>
+                        </h2>
+
+                        <!-- טופס התחברות -->
+                        <form id="Login-form" action="login.php" method="POST">
+                            <label for="username">שם משתמש:</label>
+                            <input type="text" id="username" name="username" required>
+                            <label for="password">סיסמה:</label>
+                            <input type="password" id="password" name="password" required>
+                            <button type="submit" class="btn">התחבר</button>
+                        </form>
+                        
+
+                        <!-- טופס חשבון חדש-->
+                        <form id="New-account" action="register.php" method="POST">
+                            <label for="new-username">שם משתמש:</label>
+                            <input type="text" id="new-username" name="username" required>
+                            <label for="new-password">סיסמה:</label>
+                            <input type="password" id="new-password" name="password" required>
+                            <label for="new-email">אימייל:</label>
+                            <input type="email" id="new-email" name="email" required>
+                            <button type="submit" class="btn">צור חשבון</button>
+                        </form>
+                        
+                    </div>
+                </div>
+
+                <div id="booking-list"></div>
+            </div>
+            
+            
+            <div class="info-section" id="gallery">
+                <h2>גלריית תמונות</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        
+                        <img src="coupleroom.webp" alt="חדר זוגי">
+                    
+                        <p>  חדר זוגי הכולל מיטה זוגית מפנקת מיני בר מרענן וטכנולוגיה לא מהעולם הזה
+                        </p>
+                    </div>
+                    <div class="gallery-item">
+                        
+                        <img src="fancypool.jpeg" alt="בריכה מפוארת">
+                        
+                        <p> בריכה אולימפית מפוארת הכוללת בה מגלשה ומקפצה למים ועומק של 5 מטרים</p>
+                    </div>
+                    <div class="gallery-item">
+                        
+                        <img src="gurmeres.jpeg" alt="מסעדת גורמה">
+                        
+                        <p>מסעדת גורמה בעלת חמישה כטכבים של השף יהלי נס </p>
+                    </div>
+                    <div class="gallery-item">
+                        
+                        <img src="hotelspa.jpeg" alt="ספא מרגיע">
+                       
+                        <p>ספא מרגיע הכולל מיטות מסאג וגקוזי חם וחדר סאונה יבשה ורטובה</p>
+                    </div>
+                    <div class="gallery-item">
+                        
+                        <img src="penthouse.jpeg" alt="חדר פנטהאוז">
+                        
+                        <p> פנטהאוז מרווח בקמה 22 עם 2 חדרים ואמבטיה מיוחדת וישנה גישה מלאה למיני בר ולאטרקציות נוספות במלון</p>
+                    </div>
+                </div>
+            </div>
+         
+            <div class="contact" id="contact">
+                טלפון ליצירת קשר - 0537083739<br>
+                 מייל ליצירת - ary.nabet@gmail.com<br>
+            </div>
+            <div class="buttons-section">
+                
+                
+            </div>  
+            <button id="dark-mode-toggle" class="dark-mode-btn">☀️ Light Mode</button>
+        </main> 
+        
+        <footer>
+            <div class="footer-container">
+                <h3>למה לבחור בנו?</h3>
+                <p>מלון הנסיך מציע חווית אירוח יוקרתית ומפנקת, עם שירותים ברמה גבוהה ביותר.</p>
+                <p>&copy; 2024 מלון הנסיך - כל הזכויות שמורות</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="work.js"></script>
+</body>
+</html>

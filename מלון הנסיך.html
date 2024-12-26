@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מלון הנסיך</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+    <div id="main-content">
+        <header>
+            <div class="header-container">
+                <h1>מלון הנסיך</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#history">היסטוריית שהות</a></li>
+                        <li><a href="#bookings">הזמנת חדרים</a></li>
+                        <li><a href="#facilities">שירותים</a></li>
+                        <li><a href="#gallery">גלריית תמונות</a></li>
+                        <li><a href="#reviews">ביקורות</a></li>
+                        <li><a href="#contact">צור קשר</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+        <main>
+            <div class="hero">
+                <h2>ברוכים הבאים למלון הנסיך!</h2>
+                <p>חווית אירוח יוקרתית במרכז העיר</p>
+            </div>
+            
+            <div class="info-section" id="history">
+                <h2>היסטוריית שהות</h2>
+                <div id="stay-history">
+                    <p>אין נתונים זמינים.</p>
+                </div>
+            </div>
+            
+            <div class="info-section" id="bookings">
+                <h2>הזמנת חדרים</h2>
+                <form id="booking-form">
+                    <label for="room">בחר חדר:</label>
+                    <select id="room" required>
+                        <option value="חדר רגיל">חדר רגיל</option> 
+                        <option value="חדר זוגי">חדר זוגי</option>
+                        <option value="חדר סוויטה">חדר סוויטה</option>
+                        <option value="חדר פרימיום">חדר פרימיום</option>
+                        <option value="חדר פנטהאוז">חדר פנטהאוז</option> 
+                    </select>
+                    <label for="date">בחר תאריך:</label>
+                    <input type="date" id="date" required>
+                    <button type="submit" class="btn book-now-btn">הזמן חדר</button>
+                </form>
+                <div id="booking-list"></div>
+            </div>
+            
+            
+            <div class="info-section" id="gallery">
+                <h2>גלריית תמונות</h2>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="/חדר זוגי מלון.webp" alt="חדר זוגי">
+                        <p>  חדר זוגי הכולל מיטה זוגית מפנקת מיני בר מרענן וטכנולוגיה לא מהעולם הזה
+                        </p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/בריכה פוארת.jpeg" alt="בריכה מפוארת">
+                        <p> בריכה אולימפית מפוארת הכוללת בה מגלשה ומקפצה למים ועומק של 5 מטרים</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/מסעדת גורמה.jpeg" alt="מסעדת גורמה">
+                        <p>מסעדת גורמה בעלת חמישה כטכבים של השף יהלי נס </p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/ספא מלון.jpeg" alt="ספא מרגיע">
+                        <p>ספא מרגיע הכולל מיטות מסאג וגקוזי חם וחדר סאונה יבשה ורטובה</p>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/פנטהאוז .jpeg" alt="חדר פנטהאוז">
+                        <p> פנטהאוז מרווח בקמה 22 עם 2 חדרים ואמבטיה מיוחדת וישנה גישה מלאה למיני בר ולאטרקציות נוספות במלון</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="buttons-section">
+                <button class="btn booking-btn">הזמן חדר עכשיו</button>
+                <button class="btn reviews-btn">ביקורות אורחים</button>
+                <button class="btn support-btn">שירות לקוחות</button>
+                <button class="btn facilities-btn">שירותים נוספים</button>
+            </div>
+            <button id="dark-mode-toggle" class="dark-mode-btn">🌙 Dark Mode</button>
+        </main>
+        
+        <footer>
+            <div class="footer-container">
+                <h3>למה לבחור בנו?</h3>
+                <p>מלון הנסיך מציע חווית אירוח יוקרתית ומפנקת, עם שירותים ברמה גבוהה ביותר.</p>
+                <p>&copy; 2024 מלון הנסיך - כל הזכויות שמורות</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="work.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

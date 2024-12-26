@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דף בסיסי</title>
+    <link rel="stylesheet" href="Aconect.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>מלון הנסיך</h1>
+            <nav>
+                <ul>
+                    <h2> תשלום וקבלת חדר</h2>
+                </ul>
+            </nav>
+        </div>
+    </header>    
+    <div class="credit-card-card">
+        <h2>פרטי תשלום</h2>
+        <form>
+            <label for="card-number">מספר כרטיס אשראי:</label>
+            <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+    
+            <label for="card-holder">שם בעל הכרטיס:</label>
+            <input type="text" id="card-holder" placeholder="שם מלא" required>
+    
+            <label for="expiry-date">תאריך תפוגה:</label>
+            <input type="text" id="expiry-date" placeholder="MM/YY" required>
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" placeholder="XXX" required>
+    
+            <button type="submit">שלם עכשיו</button>
+        </form>
+    </div>
+    <button id="dark-mode-toggle" class="dark-mode-btn" >🌙 מצב כהה</button>
+    
+    <script src="Aconect.js"></script>
+</body>
+</html>

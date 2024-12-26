@@ -1,0 +1,170 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(241, 238, 238); /* רקע אפור בהיר */
+    color: #001338; /* כחול כהה */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+/* Header */
+header {
+    background-color: #001338; /* כחול רויאל כהה */
+    padding: 20px 0; /* רווח אנכי בלבד */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #5bb8d6; /* תכלת מעודן */
+    position: fixed; /* מקבע את ה-navbar לראש העמוד */
+    top: 0;
+    left: 0;
+    width: 100%; /* פרוס על כל הרוחב */
+    z-index: 1000; /* מעל כל האלמנטים האחרים */
+}
+
+header h1 {
+    text-align: center;
+    color: #5bb8d6; /* תכלת מעודן */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+header h2 {
+    text-align: center;
+    color: #5bb8d6 ;
+    margin-bottom: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #5bb8d6; /* תכלת מעודן */
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav a:hover {
+    color: #6cbdd9; /* גוון מעט בהיר יותר של תכלת מעודן */
+    transform: scale(1.1);
+}
+
+/* מוסיף רווח מתחת ל-navbar */
+body {
+    padding-top: 100px; /* רווח מתחת ל-navbar כך שהתוכן לא יכסה אותו */
+}
+
+
+/* Card - פרטי אשראי */
+.credit-card-card {
+    background-color: #1c1c1c; /* שחור כהה */
+    color: #f0f0f0; /* אפור בהיר */
+    padding: 30px; /* ריווח פנימי */
+    margin: 20px auto; /* מרכז את הכרטיס */
+    width: 400px; /* רוחב הכרטיס */
+    max-width: 90%; /* התאמה למסכים קטנים */
+    border-radius: 15px; /* פינות מעוגלות */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* הצללה */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.credit-card-card:hover {
+    transform: scale(1.05); /* אפקט מוגדל בהובר */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* הצללה חזקה יותר */
+}
+
+.credit-card-card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #5bb8d6; /* תכלת מעודן */
+}
+
+.credit-card-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* מרווחים בין האלמנטים */
+}
+
+.credit-card-card label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.credit-card-card input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #555; /* אפור כהה */
+    background-color: #2a2a2a; /* אפור כהה */
+    color: #ecf0f1; /* אפור בהיר */
+}
+
+.credit-card-card input:focus {
+    outline: none;
+    border-color: #5bb8d6; /* תכלת מעודן */
+    box-shadow: 0 0 5px rgba(91, 184, 214, 0.5); /* הצללה */
+}
+
+.credit-card-card button {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #002366; /* כחול רויאל */
+    color: #f0f0f0; /* אפור בהיר */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.credit-card-card button:hover {
+    background-color: #001a4d; /* כחול כהה יותר */
+    transform: scale(1.05);
+}
+body.dark-mode {
+    background-color: #121212; /* שחור כהה */
+    color: #f0f0f0; /* אפור בהיר */
+}
+
+body.dark-mode header {
+    background-color: #001a4d; /* כחול כהה */
+    border-bottom-color: #5bb8d6; /* תכלת מעודן */
+}
+
+body.dark-mode .info-section {
+    background-color: #1c1c1c; /* שחור כהה */
+}
+
+body.dark-mode nav a {
+    color: #5bb8d6; /* תכלת מעודן */
+}
+/* Dark Mode Button */
+.dark-mode-btn {
+    font-size: 1.2rem;
+    background-color: #002366; /* כחול רויאל */
+    color: #f0f0f0; /* אפור בהיר */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* הצללה */
+    margin: 20px auto;
+    display: block;
+    text-align: center;
+}
+
+.dark-mode-btn:hover {
+    background-color: #001a4d; /* כחול כהה יותר */
+    transform: scale(1.05); /* הגדלה קטנה */
+}
+
+.dark-mode-btn:active {
+    transform: scale(0.95); /* הקטנה בלחיצה */
+}
